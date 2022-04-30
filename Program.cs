@@ -5,7 +5,8 @@ using OpenQA.Selenium.Chrome;
 using wordguesser;
 
 Random rnd = new Random();
-var dictionary = DictionaryLoad.LoadDictionary(@"path");
+var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dictionary.txt");
+var dictionary = DictionaryLoad.LoadDictionary(path);
 
 Console.WriteLine("Write your name");
 var name = Console.ReadLine();
